@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup, FormControl } from "@angular/forms";
+import { FormBuilder, FormGroup, FormControl, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 import { UserService, ContactService } from "../core";
 
@@ -22,10 +22,10 @@ export class ContactComponent implements OnInit {
     private fb: FormBuilder,
     private userService: UserService) {
 
-    this.contactForm = this.fb.group({
-          name: '',
-          email: '',
-          coment: ''
+    this.contactForm = new FormGroup({
+          'name': new FormControl('',  [Validators.required, Validators.minLength(3)]),
+      'email': new FormControl('', [Validators.required, Validators.pattern(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/)]),
+          'coment': new FormControl('', [Validators.required, Validators.maxLength(150)]),
         });
     }
 
@@ -46,11 +46,13 @@ export class ContactComponent implements OnInit {
   submitForm() {
     // update the model
     console.log(this.contactForm.value);
-    
-    this.contactService.sendEmail(this.contactForm.value).subscribe(data => {
-      console.log("----------res sendEmail",data);
-      this.isSubmitting = false;
-      /* this.router.navigateByUrl("/"); */
-    });
+    if (this.contactForm.valid) {
+      this.contactService.sendEmail(this.contactForm.value).subscribe(data => {
+        console.log("----------res sendEmail",data);
+        this.isSubmitting = false;
+        /* this.router.navigateByUrl("/"); */
+      });
+    }
+
   }
 }

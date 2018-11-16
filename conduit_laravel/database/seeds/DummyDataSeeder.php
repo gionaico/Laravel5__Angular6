@@ -5,11 +5,24 @@ use Illuminate\Database\Seeder;
 class DummyDataSeeder extends Seeder
 {
     /**
+     * Total number of articulos.
+     *
+     * @var int
+     */
+    protected $totalDevices = 5;
+    /**
+     * Total number of articulos.
+     *
+     * @var int
+     */
+    protected $totalArticulos = 7;
+    /**
      * Total number of users.
      *
      * @var int
      */
     protected $totalUsers = 25;
+
 
     /**
      * Total number of tags.
@@ -69,6 +82,11 @@ class DummyDataSeeder extends Seeder
      */
     public function run(\Faker\Generator $faker)
     {
+        /* $articulos = factory(\App\Articulos::class)->times($this->totalArticulos)->create(); */
+        $articulos = factory(\App\Devices::class)->times($this->totalDevices)->create();
+
+
+
         $users = factory(\App\User::class)->times($this->totalUsers)->create();
 
         $tags = factory(\App\Tag::class)->times($this->totalTags)->create();

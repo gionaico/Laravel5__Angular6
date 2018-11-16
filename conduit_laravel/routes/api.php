@@ -40,6 +40,11 @@ Route::group(['namespace' => 'Api'], function () {
     ]);
 
     Route::get('tags', 'TagController@index');
+    
+
+    Route::get('devices', 'DeviceController@index');
+    
+
 
     Route::post('contacto', 'ContactoController@sendEmail');
 
@@ -51,4 +56,11 @@ Route::group(['namespace' => 'Api'], function () {
         return $array;
     });
 
+    
 });
+
+/* Route::get('devices', function(){
+        $array = array('1' => 'uno',
+               '2' => 'devices');
+        return $array;
+    }); */

@@ -11,6 +11,31 @@
 |
 */
 
+$factory->define(App\Articulos::class, function (\Faker\Generator $faker) {
+    return [
+        'name' => $faker->sentence(10),
+        'price' => $faker->numberBetween(1, 5),
+        'origin_country' => $faker->sentence(10),
+        'brand' => $faker->sentence(10),
+        'model' => $faker->sentence(10),
+    ];
+});
+
+$factory->define(App\Devices::class, function (\Faker\Generator $faker) {
+    return [
+        'name' => $faker->sentence(10),
+        'price' => $faker->numberBetween(1, 5),
+        'origin_country' => $faker->sentence(10),
+        'brand' => $faker->sentence(10),
+        'model' => $faker->sentence(10),
+    ];
+});
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
+*/
 $factory->define(App\User::class, function (\Faker\Generator $faker) {
 
     return [
@@ -54,3 +79,4 @@ $factory->define(App\Tag::class, function (\Faker\Generator $faker) {
         'name' => $faker->unique()->word,
     ];
 });
+
