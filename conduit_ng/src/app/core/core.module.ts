@@ -12,13 +12,12 @@ import {
   ProfilesService,
   TagsService,
   UserService,
-  ContactService
+  ContactService, 
+  ListService
 } from "./services";
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true },
     ApiService,
@@ -29,8 +28,9 @@ import {
     ProfilesService,
     TagsService,
     UserService,
-    ContactService
+    ContactService,
+    ListService
   ],
   declarations: []
 })
-export class CoreModule { }
+export class CoreModule {}

@@ -8,6 +8,9 @@ import { ArticleListComponent, ArticleMetaComponent, ArticlePreviewComponent } f
 import { FavoriteButtonComponent, FollowButtonComponent } from './buttons';
 import { ListErrorsComponent } from './list-errors.component';
 import { ShowAuthedDirective } from './show-authed.directive';
+import { ListComponent } from './list/list.component';
+import { ArticuloComponent } from './articulo/articulo.component';
+
 
 @NgModule({
   imports: [
@@ -24,7 +27,9 @@ import { ShowAuthedDirective } from './show-authed.directive';
     FavoriteButtonComponent,
     FollowButtonComponent,
     ListErrorsComponent,
-    ShowAuthedDirective
+    ShowAuthedDirective,
+    ListComponent,
+    ArticuloComponent
   ],
   exports: [
     ArticleListComponent,
@@ -38,7 +43,9 @@ import { ShowAuthedDirective } from './show-authed.directive';
     HttpClientModule,
     ListErrorsComponent,
     RouterModule,
-    ShowAuthedDirective
+    ShowAuthedDirective,
+    ListComponent,
+    ArticuloComponent
   ]
 })
 export class SharedModule {}

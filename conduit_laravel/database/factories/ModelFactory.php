@@ -21,16 +21,17 @@ $factory->define(App\Articulos::class, function (\Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Devices::class, function (\Faker\Generator $faker) {
+$factory->define(App\dispositivos::class, function (\Faker\Generator $faker) {
     return [
-        'name' => $faker->sentence(10),
+        'name' => $faker->sentence(3),
+        'slug' => $faker->sentence(1),
+        'brand' => $faker->sentence(5),
+        'model' => $faker->sentence(1),
+        'description' => $faker->sentence(10),
         'price' => $faker->numberBetween(1, 5),
         'origin_country' => $faker->sentence(10),
-        'brand' => $faker->sentence(10),
-        'model' => $faker->sentence(10),
     ];
 });
-
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------

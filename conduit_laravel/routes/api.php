@@ -43,13 +43,13 @@ Route::group(['namespace' => 'Api'], function () {
     
 
     Route::get('devices', 'DeviceController@index');
-    
+    Route::get('dispositivos', 'DispositivosController@index');
 
 
     Route::post('contacto', 'ContactoController@sendEmail');
 
     Route::post('contact', 'ContactController@sendEmail');
-    Route::post('pruebaf', function(){
+    Route::get('pruebaf', function(){
         $array = array('1' => 'uno',
                '2' => 'dos',
                '3' => 'tres');
@@ -58,9 +58,3 @@ Route::group(['namespace' => 'Api'], function () {
 
     
 });
-
-/* Route::get('devices', function(){
-        $array = array('1' => 'uno',
-               '2' => 'devices');
-        return $array;
-    }); */

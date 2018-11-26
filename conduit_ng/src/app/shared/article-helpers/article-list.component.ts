@@ -20,7 +20,6 @@ export class ArticleListComponent {
       this.runQuery();
     }
   }
-
   query: ArticleListConfig;
   results: Article[];
   loading = false;

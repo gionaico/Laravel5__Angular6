@@ -1,0 +1,6 @@
+.listGrid{
+    display: grid;
+    max-width: var(--gn-width);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap:var(--gn-gap);
+}

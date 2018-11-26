@@ -9,7 +9,7 @@ class DummyDataSeeder extends Seeder
      *
      * @var int
      */
-    protected $totalDevices = 5;
+    protected $totalDevices = 30;
     /**
      * Total number of articulos.
      *
@@ -83,11 +83,11 @@ class DummyDataSeeder extends Seeder
     public function run(\Faker\Generator $faker)
     {
         /* $articulos = factory(\App\Articulos::class)->times($this->totalArticulos)->create(); */
-        $articulos = factory(\App\Devices::class)->times($this->totalDevices)->create();
+        $dispositivos = factory(\App\dispositivos::class)->times($this->totalDevices)->create();
 
 
 
-        $users = factory(\App\User::class)->times($this->totalUsers)->create();
+        /* $users = factory(\App\User::class)->times($this->totalUsers)->create();
 
         $tags = factory(\App\Tag::class)->times($this->totalTags)->create();
 
@@ -131,6 +131,6 @@ class DummyDataSeeder extends Seeder
                     ->each(function ($userToFollow) use ($user) {
                         $user->follow($userToFollow);
                     });
-            });
+            }); */
     }
 }

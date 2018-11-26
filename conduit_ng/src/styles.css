@@ -1,5 +1,144 @@
-/* You can add global styles to this file, and also import other style files */
-/* .has-danger{
-    border: 1px solid red;
-    background-color: palevioletred;
-} */
+/*-------------------------------------------*\
+   Pseudo-classes
+ 
+   Index
+   - Media queries: width's sizes which I use.
+   - Colors: colors which I use.
+   - Sizes: font-size, font-width, and width of general elements
+   - General classes: general classes to do padding, margin, pointer gradient....
+\*-------------------------------------------*/
+
+
+:root {
+  --font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  /*
+    * Media queries breakpoints
+    * ======================================================================== */
+
+  /* Extra small screen / phone horiz */
+  --sc-xs-min-horiz: 320px;
+  /* Extra small screen / phone */
+  --sc-xs-min: 480px;
+  /* Small screen / tablet */
+  --sc-sm-min: 768px;
+  /* Medium screen / desktop */
+  --sc-md-min: 992px;
+  /* Large screen / wide desktop */
+  --sc-lg-min: 1200px;
+
+  /*
+    * Colors
+    * ======================================================================== */
+  --body-bg: #F9F9F9;
+  --gn-blue: #363949;
+  --gn-grey: #888888;
+  --gn-white: #FFFFFF;
+  --gn-green: #00A648;
+  --gn-red: #e62c3d;
+  --gn-yell: #f9c468;
+  --gn-or: #ef7752;
+
+  --grad-a: #ffe000;
+  --grad-b: #e94057;
+  --grad-c: #8a2387;
+  --error: #DC3545;
+  --error-bg: #F2DEDE;
+
+  /*
+    * Sizes
+    * ======================================================================== */
+  --gn-width:   992px;
+  --md-width:   500px;
+  --sm-width:   250px;
+
+  --ic-size:    30px;
+  --gn-gap:     20px;
+
+  --fontSize-l: 3.3rem;
+  --fontSize-m: 2.3rem;
+  --fontSize-s: 1.3rem;
+
+  --letter-s:   100;
+  --letter-b:   700;
+}
+
+/*
+    * General classes
+    * ======================================================================== */
+* {
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--body-bg);
+  font-family: var(--font-family);
+  font-size: var(--fontSize-s);
+  font-weight: var(--letter-s);
+  color: var(--gn-grey);
+}
+
+.center-element {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lateral-padding {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.general-padding4 {
+  padding: 20px;
+}
+
+.center-inside-elements-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grad {
+  background-image: linear-gradient(to bottom right, var(--grad-a), var(--grad-b), var(--grad-c));
+}
+
+.fg-slider {
+  height: 500px !important;
+}
+
+/* alineacion vertical */
+.centrado-vertical {
+  align-items: center;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.margin-elements {
+  margin-top: 30px;
+}
+
+.form-error {
+  border: 1px solid var(--gn-red);
+  background-color: var(--error-bg)
+}
+
+.icon-size {
+  height: var(--ic-size);
+}
+
+.justify-self {
+  justify-self: center;
+}
+.margin-center{
+    margin-left: auto;
+    margin-right: auto;
+}

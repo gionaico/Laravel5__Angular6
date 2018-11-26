@@ -1,0 +1,7 @@
+<!-- <p>
+  {{articulosList | json}}
+</p> -->
+<div class="listGrid lateral-padding margin-center">
+  
+  <app-articulo *ngFor="let article of articulosList" [articulo]="article"></app-articulo>
+</div>
