@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListService } from "../../core";
 import { Router } from "@angular/router";
-import { timingSafeEqual } from 'crypto';
 
 
 @Component({
@@ -19,7 +18,7 @@ export class ListComponent implements OnInit {
     
     ngOnInit() {
       this.listDispositivosService.getAll().subscribe(data => {
-        this.articulosList = data.dispositivos;
+        this.articulosList = data;
         console.log("----------list dispo", this.articulosList);
         });
     }

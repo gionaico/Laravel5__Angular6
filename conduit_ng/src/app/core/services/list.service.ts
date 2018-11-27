@@ -13,7 +13,7 @@ export class ListService {
   getAll(): Observable<listDispositivos> {
     return this.apiService
       .get(`/dispositivos`)
-      .pipe(map(data => data));
+      .pipe(map(data => data.dispositivos));
   }
 }
 

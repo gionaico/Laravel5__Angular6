@@ -16,7 +16,6 @@ export class ArticuloComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        
         console.log(this.articulo);
     }
 }
